@@ -12,6 +12,7 @@
             <% else %>
               <li class="list-group-item bg-info"><%= link_to 'Log in', new_user_session_path, class: "login text-white-50" %></li>
               <li class="list-group-item bg-info"><%= link_to 'Sign up', new_user_registration_path, class: "sign-up text-white-50" %></li>
+              <li class="list-group-item bg-info"><%= link_to 'Guest Log in', life_charts_guest_sign_in_path, class: "login text-white-50", method: :post %></li>
             <% end %>
           </ul>
         </div>
