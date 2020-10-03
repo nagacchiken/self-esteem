@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  devise_for :users
+  root to: 'life_charts#index'
+  resource :life_charts, only: [:index]
+  post '/life_charts/guest_sign_in', to: 'life_charts#new_guest'
 end
