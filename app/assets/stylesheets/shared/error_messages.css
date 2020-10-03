@@ -1,0 +1,9 @@
+#error_explanation{
+  color: white;
+  text-align: center;
+}
+
+.error-alert {
+  font-size: 1.3vw;
+  list-style: none;
+}
