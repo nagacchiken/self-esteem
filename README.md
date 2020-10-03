@@ -1,24 +1,28 @@
-# README
+## アプリ名
+Self-esteem
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## アプリケーション概要
+自己肯定感を上げるためのトレーニングを記録として残せます。
 
-Things you may want to cover:
+## URL
 
-* Ruby version
+## 利用方法
 
-* System dependencies
+## 目指した課題解決
+自己肯定感を高めることが目的です。
+日本の若者の自己肯定感は他国に比べると低いです。
+自己肯定感が低いと自分自身に期待することができず、本来の力を発揮することができません。
+そこで、日々の積み重ねとして自己肯定感を高めるためのトレーニングを手軽に取り組んでもらえればと思い、本アプリを作成いたしました。
 
-* Configuration
+参考
+https://www8.cao.go.jp/youth/whitepaper/h26gaiyou/tokushu.html
 
-* Database creation
+## 洗い出した要件
 
-* Database initialization
+## 実装した機能についてのGIFと説明
 
-* How to run the test suite
+## 実装予定の機能
 
-* Services (job queues, cache servers, search engines, etc.)
+## データベース設計
 
-* Deployment instructions
-
-* ...
+## ローカルでの動作方法
