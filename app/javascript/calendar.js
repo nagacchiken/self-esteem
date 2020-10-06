@@ -6,8 +6,18 @@ document.addEventListener('turbolinks:load', function() {
   var calendarEl = document.getElementById('calendar');
 
   var calendar = new Calendar(calendarEl, {
-    plugins: [ dayGridPlugin, interactionPlugin ]
+    plugins: [ dayGridPlugin, interactionPlugin ],
+    selectable: true,
+    events: [
+      {
+        
+        start: '2020-10-01',
+        
+      }
+      // other events here
+    ]
   });
+  
 
   calendar.render();
 });
