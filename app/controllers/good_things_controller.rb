@@ -10,6 +10,8 @@ class GoodThingsController < ApplicationController
     
     if @good_thing.save
     redirect_to root_path
+    else
+      render @good_thing
     end
   end
 
