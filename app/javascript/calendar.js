@@ -10,12 +10,24 @@ document.addEventListener('turbolinks:load', function() {
     plugins: [ dayGridPlugin, interactionPlugin ],
     events: 'index.json',
     initialView: 'dayGridMonth',
-    selectable: true
+    
+    
   });
   
 
   calendar.render();
 });
+
+
+function dateclick() {
+  const dateClicks = document.querySelectorAll(".fc-daygrid-day-frame");
+  dateClicks.forEach(function (dateClick) {
+
+    dateClick.insertAdjacentHTML("beforeend", `<button type="button" class="btn " data-toggle="modal" data-target="#exampleModal">記入する</button>`);
+  })
+}
+window.addEventListener("load", dateclick);
+
 
 function check() {
   const posts = document.querySelectorAll(".fc-daygrid-day");
@@ -25,10 +37,10 @@ function check() {
       const dataDate = post.getAttribute("data-date")
       console.log(dataDate)
       const selectDate = `<input value=${dataDate} type="hidden" name='good_thing[start_date]'>`;
-      const div2 = document.getElementById("select-date")
+      const startDate = document.getElementById("start-date")
       
-      console.log(div2)
-      const input1 = div2.insertAdjacentHTML("beforeend", selectDate);
+      console.log(startDate)
+      startDate.insertAdjacentHTML("beforeend", selectDate);
       
       
     });
