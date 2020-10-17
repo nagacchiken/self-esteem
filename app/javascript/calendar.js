@@ -8,7 +8,7 @@ document.addEventListener('turbolinks:load', function() {
 
   var calendar = new Calendar(calendarEl, {
     plugins: [ dayGridPlugin, interactionPlugin ],
-    events: 'index.json',
+    events: '/good_things.json',
     initialView: 'dayGridMonth',
     
     
@@ -18,7 +18,7 @@ document.addEventListener('turbolinks:load', function() {
   calendar.render();
 });
 
-
+// カレンダー内にモーダルを表示させる
 function dateClick() {
   const dateClicks = document.querySelectorAll(".fc-daygrid-day-frame");
   dateClicks.forEach(function (dateClick) {
@@ -27,13 +27,14 @@ function dateClick() {
   })
 }
 window.addEventListener("load", dateClick);
-
+// カレンダー内にモーダルを表示させる
 
 function check() {
   const posts = document.querySelectorAll(".fc-daygrid-day");
   posts.forEach(function (post) {
     post.addEventListener("click", () => { 
       
+      // 投稿日時を取得
       const dataDate = post.getAttribute("data-date")
       console.log(dataDate)
       const selectDate = `<input value=${dataDate} type="hidden" name='good_thing[start_date]'>`;
@@ -41,14 +42,19 @@ function check() {
       
       console.log(startDate)
       startDate.insertAdjacentHTML("beforeend", selectDate);
+      // 投稿日時を取得
       
+      // パラムにクリックした日付を渡す（現在廃止）
+      const setParams = `?date=${dataDate}`
+        history.pushState(null, null, setParams)
+      // パラムにクリックした日付を渡す（現在廃止）
       
     });
   });
   
 
 }
-window.addEventListener("load", check);
+window.addEventListener("turbolinks:load", check);
 
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').trigger('focus')
