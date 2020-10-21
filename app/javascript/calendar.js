@@ -11,7 +11,6 @@ document.addEventListener('turbolinks:load', function() {
     events: '/good_things.json',
     initialView: 'dayGridMonth',
     
-    
   });
   
 
@@ -45,8 +44,8 @@ function check() {
       // 投稿日時を取得
       
       // パラムにクリックした日付を渡す（現在廃止）
-      const setParams = `?date=${dataDate}`
-        history.pushState(null, null, setParams)
+      // const setParams = `?date=${dataDate}`
+      //   history.pushState(null, null, setParams)
       // パラムにクリックした日付を渡す（現在廃止）
       
     });
@@ -54,8 +53,6 @@ function check() {
   
 
 }
-window.addEventListener("turbolinks:load", check);
+window.addEventListener("load", check);
 
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').trigger('focus')
-})
+
