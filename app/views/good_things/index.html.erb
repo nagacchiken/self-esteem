@@ -1,0 +1,49 @@
+
+<div class="body d-flex justify-content-center">
+  <div class="w-75 h-75 ">
+    <div id='calendar'></div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= form_with(model: @good_thing,url:good_things_path, local: true) do |form| %>
+  <div class="field">
+    <%= form.label :good_1 %>
+    <%= form.text_field :good_1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :good_2 %>
+    <%= form.text_field :good_2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :good_3 %>
+    <%= form.text_field :good_3 %>
+  </div>
+
+  <div id="start-date">
+    <%#= form.label :start_date %>
+    <%#= form.datetime_select :start_date %>
+  </div>
+
+  
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <%= form.submit "登録する",class:"btn btn-primary"%>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
