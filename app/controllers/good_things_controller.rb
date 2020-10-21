@@ -1,8 +1,16 @@
 class GoodThingsController < ApplicationController
   def index
     @good_things = GoodThing.all
-    @good_thing = GoodThing.new
+ 
+      @good_thing = GoodThing.find_or_initialize_by(
+        start_date:params[:date],user_id:current_user.id)
+    
   end
+
+  # def new
+  #   @event = GoodThing.new
+  #   render plain: render_to_string(partial: 'form_new', layout: false, locals: { good_thing: @good_thing })
+  # end
 
   def create
     
@@ -15,14 +23,19 @@ class GoodThingsController < ApplicationController
     end
   end
 
-def update
-  @good_thing = GoodThing.find_by(
-    start_date:good_thing_params[:start_date],user_id:current_user.id
-  ).update(good_thing_params)
+  def show
+  
+    @good_thing = GoodThing.find(params[:id])
+  end
 
-  redirect_to good_things_index_path
+# def update
+#   @good_thing = GoodThing.find_by(
+#     start_date:good_thing_params[:start_date],user_id:current_user.id
+#   ).update(good_thing_params)
 
-end
+#   redirect_to good_things_index_path
+
+# end
 
   private
   
@@ -31,6 +44,5 @@ end
     ).permit(:good_1, :good_2, :good_3,:start_date
     ).merge(user_id: current_user.id)
   end
-
 
 end
