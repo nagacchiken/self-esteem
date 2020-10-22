@@ -14,12 +14,18 @@ https://selfesteem.herokuapp.com/
 そこで、日々の積み重ねとして自己肯定感を高めるためのトレーニングを手軽に取り組んでもらえればと思い、本アプリを作成いたしました。
 
 ## DEMO
+カレンダー画面
+https://user-images.githubusercontent.com/69777301/96845663-e29ece00-148b-11eb-989e-262fcab5de2f.png
+投稿画面
+https://user-images.githubusercontent.com/69777301/96850311-9fdff480-1491-11eb-9838-d31527f06343.png
 
 ## 工夫したポイント
 カレンダー内にモーダルのリンクを設置したこと。
 
 ## 使用技術(開発環境)
-ruby,ruby on rails,javascript,bootstrap,fullcalender(gem)
+言語:ruby,javascript
+フレームワーク:ruby on rails,bootstrap
+DB:mysql
 
 ## 課題や今後実装したい機能
 ・翌月や先月のカレンダーページを開くと、「記入する」とのモーダルの遷移が表示されなくなる
@@ -28,3 +34,4 @@ ruby,ruby on rails,javascript,bootstrap,fullcalender(gem)
 ・独自ドメインの取得
 
 ## DB設計
+https://user-images.githubusercontent.com/69777301/96851513-13cecc80-1493-11eb-904c-4816a148be50.png
