@@ -15,9 +15,12 @@ https://selfesteem.herokuapp.com/
 
 ## DEMO
 カレンダー画面
-https://user-images.githubusercontent.com/69777301/96845663-e29ece00-148b-11eb-989e-262fcab5de2f.png
+![カレンダー]
+(https://user-images.githubusercontent.com/69777301/96845663-e29ece00-148b-11eb-989e-262fcab5de2f.png)
+<br>
 投稿画面
-https://user-images.githubusercontent.com/69777301/96850311-9fdff480-1491-11eb-9838-d31527f06343.png
+![投稿画面]
+(https://user-images.githubusercontent.com/69777301/96850311-9fdff480-1491-11eb-9838-d31527f06343.png)
 
 ## 工夫したポイント
 カレンダー内にモーダルのリンクを設置したこと。
