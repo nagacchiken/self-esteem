@@ -22,7 +22,7 @@ function dateClick() {
   const dateClicks = document.querySelectorAll(".fc-daygrid-day-frame");
   dateClicks.forEach(function (dateClick) {
 
-    dateClick.insertAdjacentHTML("beforeend", `<button type="button" class="btn " data-toggle="modal" data-target="#exampleModal">記入する</button>`);
+    dateClick.insertAdjacentHTML("beforeend", `<button type="button" class="btn text-white" data-toggle="modal" data-target="#exampleModal">記入する</button>`);
   })
 }
 window.addEventListener("load", dateClick);
