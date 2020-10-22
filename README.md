@@ -15,12 +15,10 @@ https://selfesteem.herokuapp.com/
 
 ## DEMO
 カレンダー画面
-![カレンダー]
-(https://user-images.githubusercontent.com/69777301/96845663-e29ece00-148b-11eb-989e-262fcab5de2f.png)
+<img width="1376" alt="スクリーンショット 2020-10-22 16 39 15" src="https://user-images.githubusercontent.com/69777301/96853749-b0926980-1495-11eb-9948-c3171c82e342.png">
 <br>
 投稿画面
-![投稿画面]
-(https://user-images.githubusercontent.com/69777301/96850311-9fdff480-1491-11eb-9838-d31527f06343.png)
+<img width="1404" alt="スクリーンショット 2020-10-22 18 05 54" src="https://user-images.githubusercontent.com/69777301/96853879-d750a000-1495-11eb-8848-17692ac7ac5b.png">
 
 ## 工夫したポイント
 カレンダー内にモーダルのリンクを設置したこと。
@@ -37,4 +35,4 @@ DB:mysql
 ・独自ドメインの取得
 
 ## DB設計
-https://user-images.githubusercontent.com/69777301/96851513-13cecc80-1493-11eb-904c-4816a148be50.png
+![self-esteemこっち](https://user-images.githubusercontent.com/69777301/96853931-e8011600-1495-11eb-9815-776efc4c9a08.png)
