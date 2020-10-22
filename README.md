@@ -25,7 +25,9 @@ https://selfesteem.herokuapp.com/
 
 ## 使用技術(開発環境)
 言語:ruby,javascript
+<br>
 フレームワーク:ruby on rails,bootstrap
+<br>
 DB:mysql
 
 ## 課題や今後実装したい機能
