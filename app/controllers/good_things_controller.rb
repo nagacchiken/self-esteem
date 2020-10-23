@@ -3,10 +3,7 @@ class GoodThingsController < ApplicationController
 
   def index
     @good_things = GoodThing.all
- 
-      @good_thing = GoodThing.find_or_initialize_by(
-        start_date:params[:date],user_id:current_user.id)
-    
+    @good_thing = GoodThing.new
   end
 
   # def new
