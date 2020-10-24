@@ -21,7 +21,7 @@ class GoodThingsController < ApplicationController
     if @good_thing.save
     redirect_to good_things_index_path
     else
-      render @good_thing
+      render :index
     end
   end
 
