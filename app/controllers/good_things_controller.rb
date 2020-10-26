@@ -2,7 +2,7 @@ class GoodThingsController < ApplicationController
   before_action :authenticate_user!, only: [:index,:create]
 
   def index
-    @good_things = GoodThing.all
+    @good_things = GoodThing.where(user:current_user.id)
     @good_thing = GoodThing.new
   end
 
