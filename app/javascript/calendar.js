@@ -10,7 +10,27 @@ document.addEventListener('DOMContentLoaded', function() {
     plugins: [ dayGridPlugin, interactionPlugin ],
     events: '/good_things.json',
     initialView: 'dayGridMonth',
-    
+    dateClick: function () {
+      //クリックした日付情報を取得
+      const dataDate = document.querySelectorAll("data-date")
+      //イベント登録のためnewアクションを発火
+      $.ajax({
+        type: 'GET',
+        url: '/good_things/new',
+      }).done(function (res) {
+        //イベント登録用のhtmlを作成
+        $('.modal-body').html(res);
+        
+        //イベント登録フォームの日付をクリックした日付とする
+       
+        //イベント登録フォームのモーダル表示
+        $('#exampleModal').modal();
+        // 成功処理
+      }).fail(function (result) {
+        // 失敗処理
+        alert('エラーが発生しました。運営に問い合わせてください。')
+      });
+    },
   });
   
 
@@ -18,14 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // カレンダー内にモーダルを表示させる
-function dateClick() {
-  const dateClicks = document.querySelectorAll(".fc-daygrid-day-frame");
-  dateClicks.forEach(function (dateClick) {
+// function dateClick() {
+//   const dateClicks = document.querySelectorAll(".fc-daygrid-day-frame");
+//   dateClicks.forEach(function (dateClick) {
 
-    dateClick.insertAdjacentHTML("beforeend", `<button type="button" class="btn text-white" data-toggle="modal" data-target="#exampleModal">記入する</button>`);
-  })
-}
-window.addEventListener("load", dateClick);
+//     dateClick.insertAdjacentHTML("beforeend", `<button type="button" class="btn text-white" data-toggle="modal" data-target="#exampleModal">記入する</button>`);
+//   })
+// }
+// window.addEventListener("load", dateClick);
 // カレンダー内にモーダルを表示させる
 
 function check() {

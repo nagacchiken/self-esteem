@@ -3,21 +3,20 @@ class GoodThingsController < ApplicationController
 
   def index
     @good_things = GoodThing.all
- 
-      @good_thing = GoodThing.find_or_initialize_by(
-        start_date:params[:date],user_id:current_user.id)
-    
+    @good_thing = GoodThing.new
   end
 
-  # def new
-  #   @event = GoodThing.new
-  #   render plain: render_to_string(partial: 'form_new', layout: false, locals: { good_thing: @good_thing })
-  # end
+   def new
+    
+    #  @good_thing = GoodThing.new
+    #  render plain: render_to_string(partial: 'form_new', layout: false, locals: { good_thing: @good_thing })
+   
+    end
 
   def create
     
     @good_thing = GoodThing.new(good_thing_params)
-    
+
     if @good_thing.save
     redirect_to good_things_index_path
     else
