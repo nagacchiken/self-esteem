@@ -1,5 +1,5 @@
 class GoodThingsController < ApplicationController
-  before_action :authenticate_user!, only: [:index,:create]
+  before_action :authenticate_user!, only: [:index,:create,:show]
 
   def index
     @good_things = GoodThing.where(user:current_user.id)
