@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         //イベント登録フォームの日付をクリックした日付とする
        
         //イベント登録フォームのモーダル表示
-        $('#exampleModal').modal();
+        $('#good_thing_Modal').modal();
         // 成功処理
       }).fail(function (result) {
         // 失敗処理
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //   const dateClicks = document.querySelectorAll(".fc-daygrid-day-frame");
 //   dateClicks.forEach(function (dateClick) {
 
-//     dateClick.insertAdjacentHTML("beforeend", `<button type="button" class="btn text-white" data-toggle="modal" data-target="#exampleModal">記入する</button>`);
+//     dateClick.insertAdjacentHTML("beforeend", `<button type="button" class="btn text-white" data-toggle="modal" data-target="#good_thing_Modal">記入する</button>`);
 //   })
 // }
 // window.addEventListener("load", dateClick);
