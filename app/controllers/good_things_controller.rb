@@ -6,19 +6,21 @@ class GoodThingsController < ApplicationController
     @good_thing = GoodThing.new
   end
 
-  # def new
-  #   @event = GoodThing.new
-  #   render plain: render_to_string(partial: 'form_new', layout: false, locals: { good_thing: @good_thing })
-  # end
+   def new
+    
+    #  @good_thing = GoodThing.new
+    #  render plain: render_to_string(partial: 'form_new', layout: false, locals: { good_thing: @good_thing })
+   
+    end
 
   def create
     
     @good_thing = GoodThing.new(good_thing_params)
-    
+
     if @good_thing.save
     redirect_to good_things_index_path
     else
-      render @good_thing
+      render :index
     end
   end
 

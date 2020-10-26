@@ -8,38 +8,38 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="good_thing_Modal" tabindex="-1" role="dialog" aria-labelledby="good_thing_ModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">今日よかったことを投稿しましょう！</h5>
+        <h5 class="modal-title" id="good_thing_ModalLabel">今日よかったことを投稿しましょう！</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+
       <div class="modal-body">
         <%= form_with(model: @good_thing,url:good_things_path, local: true) do |form| %>
-  <div class="field">
-    <%= form.label :good_1 %>
-    <%= form.text_field :good_1 %>
-  </div>
+        <%= render 'shared/error_messages', model: form.object %>
+          <div class="field">
+            <%= form.label :good_1 %>
+            <%= form.text_field :good_1 %>
+          </div>
 
-  <div class="field">
-    <%= form.label :good_2 %>
-    <%= form.text_field :good_2 %>
-  </div>
+          <div class="field">
+            <%= form.label :good_2 %>
+            <%= form.text_field :good_2 %>
+          </div>
 
-  <div class="field">
-    <%= form.label :good_3 %>
-    <%= form.text_field :good_3 %>
-  </div>
+          <div class="field">
+            <%= form.label :good_3 %>
+            <%= form.text_field :good_3 %>
+          </div>
 
-  <div id="start-date">
-    <%#= form.label :start_date %>
-    <%#= form.datetime_select :start_date %>
-  </div>
-
-  
+          <div id="start-date">
+            <%#= form.label :start_date %>
+            <%#= form.datetime_select :start_date %>
+          </div>
 
       </div>
       <div class="modal-footer">
