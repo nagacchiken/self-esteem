@@ -27,7 +27,7 @@ https://selfesteem.herokuapp.com/
 <br>
 ③該当する日付をカレンダーから選び、投稿してください
 <br>
-④このように投稿画面が表示されます（スクショ添付）
+④このように投稿画面が表示されます
 <img width="1426" alt="スクリーンショット 2020-10-27 18 26 05" src="https://user-images.githubusercontent.com/69777301/97282445-05612600-1882-11eb-9150-7ac66e70f78c.png">
 
 <br>
