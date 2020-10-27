@@ -18,7 +18,20 @@ https://selfesteem.herokuapp.com/
 <img width="1376" alt="スクリーンショット 2020-10-22 16 39 15" src="https://user-images.githubusercontent.com/69777301/96853749-b0926980-1495-11eb-9948-c3171c82e342.png">
 <br>
 投稿画面
-<img width="1404" alt="スクリーンショット 2020-10-22 18 05 54" src="https://user-images.githubusercontent.com/69777301/96853879-d750a000-1495-11eb-8848-17692ac7ac5b.png">
+<img width="1426" alt="スクリーンショット 2020-10-27 18 26 05" src="https://user-images.githubusercontent.com/69777301/97282445-05612600-1882-11eb-9150-7ac66e70f78c.png">
+
+## 利用方法
+①<a href ="https://selfesteem.herokuapp.com/">こちら</a>をクリックし、ゲストログインをクリックして下さい
+<br>
+②今日良かったところを投稿するをクリックしてください
+<br>
+③該当する日付をカレンダーから選び、投稿してください
+<br>
+④このように投稿画面が表示されます（スクショ添付）
+<img width="1426" alt="スクリーンショット 2020-10-27 18 26 05" src="https://user-images.githubusercontent.com/69777301/97282445-05612600-1882-11eb-9150-7ac66e70f78c.png">
+
+<br>
+※全ての機能を使うためにはログインが必須となります
 
 ## 工夫したポイント
 カレンダー内にモーダルのリンクを設置したこと。
