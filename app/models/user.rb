@@ -10,7 +10,7 @@ class User < ApplicationRecord
     validates :nickname, :password_confirmation
     validates :email, uniqueness: true
     validates :email, exclusion: { in: ['@'] }
-    validates :password, length: { minimum: 6}
+    validates :password, length: { minimum: 6 }
     validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i }
   end
 end
