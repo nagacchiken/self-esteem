@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'life_charts#index'
   post '/life_charts/guest_sign_in', to: 'life_charts#new_guest'
-  resources :good_things, only: [:index,:create,:update,:show,:new]
+  resources :good_things, only: [:index,:create,:update,:show,:new,:destroy]
 
 end

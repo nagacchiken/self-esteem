@@ -34,6 +34,15 @@ class GoodThingsController < ApplicationController
 
   # end
 
+  def destroy
+    @good_thing = GoodThing.find(params[:id])
+    if @good_thing.destroy
+      redirect_to good_things_index_path
+    else
+      render :show
+    end
+  end
+
   private
 
   def good_thing_params
