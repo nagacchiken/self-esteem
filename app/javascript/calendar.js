@@ -11,8 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     events: '/good_things.json',
     initialView: 'dayGridMonth',
     dateClick: function () {
-      //クリックした日付情報を取得
-      const dataDate = document.querySelectorAll("data-date")
       //イベント登録のためnewアクションを発火
       $.ajax({
         type: 'GET',
