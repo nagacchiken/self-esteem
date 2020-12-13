@@ -3,6 +3,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { data } from 'jquery';
 
+//FullCalendarの表示
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
 
@@ -30,10 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     },
   });
-  
 
   calendar.render();
 });
+//FullCalendarの表示ここまで
 
 // カレンダー内にモーダルを表示させる
 // function dateClick() {
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // window.addEventListener("load", dateClick);
 // カレンダー内にモーダルを表示させる
 
+// 投稿日時の取得関連
 function check() {
   const posts = document.querySelectorAll(".fc-daygrid-day");
   posts.forEach(function (post) {
@@ -68,9 +70,17 @@ function check() {
       
     });
   });
-  
-
 }
 setInterval(check, 1000);
+// 投稿日時の取得関連ここまで
 
-
+ // カレンダー内の投稿日時部分の削除
+  function deleteHizuke() {
+    var hinichi = document.getElementsByClassName("fc-event-time")
+    hinichi = Array.from(hinichi)
+    hinichi.forEach(function (x){
+      x.innerHTML = ""
+    })
+  }
+  setInterval(deleteHizuke, 10);
+  // カレンダー内の投稿日時部分の削除ここまで
