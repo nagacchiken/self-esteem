@@ -19,9 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }).done(function (res) {
         //イベント登録用のhtmlを作成
         $('.modal-body').html(res);
-        
-        //イベント登録フォームの日付をクリックした日付とする
-       
         //イベント登録フォームのモーダル表示
         $('#good_thing_Modal').modal();
         // 成功処理
@@ -55,11 +52,8 @@ function check() {
       
       // 投稿日時を取得
       const dataDate = post.getAttribute("data-date")
-      console.log(dataDate)
       const selectDate = `<input value=${dataDate} type="hidden" name='good_thing[start_date]'>`;
       const startDate = document.getElementById("start-date")
-      
-      console.log(startDate)
       startDate.insertAdjacentHTML("beforeend", selectDate);
       // 投稿日時を取得
       
