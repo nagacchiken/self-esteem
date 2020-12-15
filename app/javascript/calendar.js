@@ -3,6 +3,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import { data } from 'jquery';
 
+//FullCalendarの表示
 document.addEventListener('DOMContentLoaded', function() {
   var calendarEl = document.getElementById('calendar');
 
@@ -11,8 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     events: '/good_things.json',
     initialView: 'dayGridMonth',
     dateClick: function () {
-      //クリックした日付情報を取得
-      const dataDate = document.querySelectorAll("data-date")
       //イベント登録のためnewアクションを発火
       $.ajax({
         type: 'GET',
@@ -20,9 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }).done(function (res) {
         //イベント登録用のhtmlを作成
         $('.modal-body').html(res);
-        
-        //イベント登録フォームの日付をクリックした日付とする
-       
         //イベント登録フォームのモーダル表示
         $('#good_thing_Modal').modal();
         // 成功処理
@@ -32,10 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     },
   });
-  
 
   calendar.render();
 });
+//FullCalendarの表示ここまで
 
 // カレンダー内にモーダルを表示させる
 // function dateClick() {
@@ -48,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // window.addEventListener("load", dateClick);
 // カレンダー内にモーダルを表示させる
 
+// 投稿日時の取得関連
 function check() {
   const posts = document.querySelectorAll(".fc-daygrid-day");
   posts.forEach(function (post) {
@@ -55,11 +52,8 @@ function check() {
       
       // 投稿日時を取得
       const dataDate = post.getAttribute("data-date")
-      console.log(dataDate)
       const selectDate = `<input value=${dataDate} type="hidden" name='good_thing[start_date]'>`;
       const startDate = document.getElementById("start-date")
-      
-      console.log(startDate)
       startDate.insertAdjacentHTML("beforeend", selectDate);
       // 投稿日時を取得
       
@@ -70,9 +64,17 @@ function check() {
       
     });
   });
-  
-
 }
 setInterval(check, 1000);
+// 投稿日時の取得関連ここまで
 
-
+ // カレンダー内の投稿日時部分の削除
+  function deleteHizuke() {
+    var hinichi = document.getElementsByClassName("fc-event-time")
+    hinichi = Array.from(hinichi)
+    hinichi.forEach(function (x){
+      x.innerHTML = ""
+    })
+  }
+  setInterval(deleteHizuke, 10);
+  // カレンダー内の投稿日時部分の削除ここまで

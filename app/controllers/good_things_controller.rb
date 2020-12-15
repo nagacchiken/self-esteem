@@ -7,8 +7,6 @@ class GoodThingsController < ApplicationController
   end
 
   def new
-    #  @good_thing = GoodThing.new
-    #  render plain: render_to_string(partial: 'form_new', layout: false, locals: { good_thing: @good_thing })
   end
 
   def create
@@ -24,15 +22,6 @@ class GoodThingsController < ApplicationController
   def show
     @good_thing = GoodThing.find(params[:id])
   end
-
-  # def update
-  #   @good_thing = GoodThing.find_by(
-  #     start_date:good_thing_params[:start_date],user_id:current_user.id
-  #   ).update(good_thing_params)
-
-  #   redirect_to good_things_index_path
-
-  # end
 
   def destroy
     @good_thing = GoodThing.find(params[:id])
