@@ -44,11 +44,10 @@ https://selfesteem.herokuapp.com/
 DB:mysql
 
 ## 課題や今後実装したい機能
-・投稿内容確認ページの非同期実装
+・レスポンシブデザインの対応
 <br>
-・投稿内容の編集機能
-<br>
-・独自ドメインの取得
+・エラーハンドリング箇所の修正
+
 
 ## DB設計
 ![self-esteemこっち](https://user-images.githubusercontent.com/69777301/96853931-e8011600-1495-11eb-9815-776efc4c9a08.png)
