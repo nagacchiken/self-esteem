@@ -50,4 +50,4 @@ DB:mysql
 
 
 ## DB設計
-![self-esteemこっち](https://user-images.githubusercontent.com/69777301/96853931-e8011600-1495-11eb-9815-776efc4c9a08.png)
+![self-esteemこっち](https://user-images.githubusercontent.com/69777301/102486485-71a31d80-40ac-11eb-9367-48ce192bed67.png)
